@@ -15,7 +15,8 @@ internal class ComplexOverloadOperatorsKtTest {
 
     @Test
     internal fun plus() {
-        val sum = first + second
+        val sum = first + second // operator
+        println(first)
         assertThat(sum).isEqualTo(Complex(3.0, 8.0))
     }
 

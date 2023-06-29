@@ -1,8 +1,12 @@
 package oop
 
 fun main(){
-    println( Task("바보",-3).priority)
-
+    val myTask = Task("동현").apply { priority = 2 }
+    val myTast1 = Task("동현",4)
+    val myTast2 = Task("동현")
+    println(myTask.priority) // 2
+    println(myTast1.priority) // 3
+    println(myTast2.priority) // 4
 }
 class Task(val name: String, _priority: Int = DEFAULT_PRIORITY) {
 
@@ -18,7 +22,7 @@ class Task(val name: String, _priority: Int = DEFAULT_PRIORITY) {
             field = validPriority(value)
         }
 
-    private fun validPriority(p: Int) = // private 선언된 우선순위 검증 함수
+    private fun validPriority(p: Int) =
         p.coerceIn(MIN_PRIORITY, MAX_PRIORITY) // 최소보다 작을경우 MIN_PRIORITY 반환 최대보다 클 경우 MAX_PRIORITY 반환
 
 

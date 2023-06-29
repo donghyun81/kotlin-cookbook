@@ -7,7 +7,7 @@ import org.junit.jupiter.api.assertAll
 internal class CustomerTest {
     @Test
     internal fun `load messages`() {
-        val customer = Customer("Fred").apply { messages }
+        val customer = Customer("Fred")
         assertEquals(3, customer.messages.size)
     }
 

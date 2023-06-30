@@ -4,7 +4,6 @@ import java.util.*
 
 // From tweet on @Kotlin feed
 // Also, https://kotlinlang.org/docs/reference/whatsnew13.html#associatewith
-
 @Suppress("ReplaceAssociateFunction")
 fun <T> repeatAndCapitalizeUsingAssociate(keys: Iterable<T>) =
     keys.associate { it to it.toString().repeat(5)

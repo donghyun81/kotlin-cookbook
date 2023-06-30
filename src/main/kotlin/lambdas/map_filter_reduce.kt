@@ -4,7 +4,6 @@ import java.time.LocalDate
 import java.time.Month
 import java.time.Period
 // 함수형 프로그래밍은 불변성을 선호하고 순수 함수를 사용하는 경우 동시성을 쉽게 구현할 수 있고, 반복 보다는 변형, 조건문 보다는 필터를 사용한다.
-
 data class Person(val first: String,
                   val last: String,
                   val dob: LocalDate)

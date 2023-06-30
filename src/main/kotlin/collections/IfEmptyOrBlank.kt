@@ -7,8 +7,8 @@ fun onSaleProductsIfEmptyCollection(products: List<Product>) =
         .joinToString(separator = ", ") //"세탁기, 냉장고, 에어컨 ..." 식의 String으로 변환
 
 fun onSaleProductsIfEmptyString(products: List<Product>) =
-    products.filter { it.onSale }// 세일인 상품만 담아서 반환
-        .joinToString(separator = ", ") { it.name }// "세탁기, 냉장고, 에어컨 ..." 형태로 이름만 나눠서 String으로 변환
+    products.filter { it.onSale }
+        .joinToString(separator = ", ") { it.name }// "세탁기, 냉장고, 에어컨 ..." 형태로 이름만 나눠서 String으로 반환
         .ifEmpty { "none" } // string이 null일 경우에 none 반환
 
 fun main() {

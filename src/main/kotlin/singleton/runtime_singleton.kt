@@ -8,6 +8,7 @@ object MySingleton {
     fun myFunction() = "Hello"
 }
 
+
 object ConnectionPool {
     private val availablePool = mutableListOf<Connection>()
     val usedPool = mutableListOf<Connection>()

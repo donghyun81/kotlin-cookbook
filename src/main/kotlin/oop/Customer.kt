@@ -3,9 +3,9 @@ package oop
 class Customer(val name: String) {
 
     override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        val otherCustomer = (other as? Customer) ?: return false
-        return this.name == otherCustomer.name
+        if (this === other) return true // 레퍼런스가 같은면 밑에 검사와 상관없이 true
+        val otherCustomer = (other as? Customer) ?: return false // 같은 타입으로 변환이 불가능할 경우 false
+        return this.name == otherCustomer.name // 내부의 속성이 같으면 true 다를경우 false
     }
 
     override fun hashCode() = name.hashCode()

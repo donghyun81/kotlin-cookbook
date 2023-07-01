@@ -14,15 +14,15 @@ fun main() {
     )
 
     // Create comparator and sort using it
-    val comparator = compareBy(Golfer::score)
-        .thenBy(Golfer::last)
-        .thenBy(Golfer::first)
-    golfers.sortedWith(comparator)
-        .forEach(::println)
+    val comparator = compareBy(Golfer::score) // Golfer 타입 객체 점수 별로 정렬
+        .thenBy(Golfer::last)  // Golfer 타입 객체 점수가 같을 경우 last별로 정렬
+        .thenBy(Golfer::first) // Golfer 타입 객체 점수가 같을 경우 last도 같을 경우 first로 정렬하는 Comparator 반환
+    golfers.sortedWith(comparator) //Comparator 형식에 따라 정렬
+        .forEach(::println) // 객체를 println으로 출력
 
     // Sort by properties
     val sorted = golfers.sortedWith(
-        compareBy({ it.score }, { it.last }, { it.first })
+        compareBy({ it.score }, { it.last }, { it.first }) //위 comparator 변수랑 같은 Compparator 반환
     )
 
     sorted.forEach { println(it) }

@@ -22,7 +22,7 @@ fun main() {
 
     // Sort by properties
     val sorted = golfers.sortedWith(
-        compareBy({ it.score }, { it.last }, { it.first }) //위 comparator 변수랑 같은 Compparator 반환
+        compareBy({ it.score }, { it.last }, { it.first }) //위 comparator 변수랑 같은 Comparator 반환
     )
 
     sorted.forEach { println(it) }

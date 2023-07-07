@@ -2,6 +2,8 @@ package scope
 
 import java.util.*
 
+
+
 fun processNullableString(str: String?) =
     str?.let { s ->
         when {

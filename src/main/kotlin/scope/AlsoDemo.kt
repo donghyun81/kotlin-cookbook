@@ -1,0 +1,5 @@
+package scope
+
+fun main(){
+
+}

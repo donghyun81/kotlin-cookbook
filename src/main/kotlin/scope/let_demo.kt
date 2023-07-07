@@ -2,6 +2,12 @@ package scope
 
 import java.util.*
 
+fun main(){
+    val people = listOf(Person("Tom",21),Person("Kevin",19),Person("Curry",23))
+    people.map { it.age }.filter { it >20 }.let { println(it) }
+    people.map { it.age }.filter { it >20 }.let (::println)
+}
+
 fun processNullableString(str: String?) =
     str?.let { s -> // null 가능 레퍼런스로 let을 실행한다
         when {
@@ -24,4 +30,5 @@ fun processString(str: String) = when {
         else it.toString()
     }
 }
+
 

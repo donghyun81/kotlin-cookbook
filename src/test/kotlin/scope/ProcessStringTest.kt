@@ -24,6 +24,7 @@ internal class ProcessStringTest {
     @Test
     fun processRegularNullableString() {
         assertEquals("Abc", processNullableString("abc"))
+        assertEquals("AbC", processNullableString("abC"))
     }
 
     @Test

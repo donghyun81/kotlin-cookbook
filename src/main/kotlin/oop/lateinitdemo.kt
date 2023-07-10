@@ -4,9 +4,9 @@ class LateInitDemo {
     lateinit var name: String
 
     fun initializeName() {
-        println("Before assignment: ${::name.isInitialized}")
+        println("Before assignment: ${::name.isInitialized}") // name 초기화전
         name = "World"
-        println("After assignment: ${::name.isInitialized}")
+        println("After assignment: ${::name.isInitialized}") //name = World로 초기화된 후
     }
 }
 

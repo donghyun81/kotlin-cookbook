@@ -15,7 +15,7 @@ var checked: Int by Delegates.vetoable(0) { prop, old, new ->
     println("Trying to change ${prop.name} from $old to $new")
     new >= 0
 }
-
+// Delegates.notNull()을 위임 받으면 ReadWriteProperty타입의 private 구현 객체 NotNullVar에서 override된 getValue,setValue가 실행된다
 var shouldNotBeNull: String by Delegates.notNull()
 
 
